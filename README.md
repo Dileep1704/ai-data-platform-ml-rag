@@ -56,6 +56,3 @@ http://127.0.0.1:8000/docs
 * Add authentication
 * Add frontend dashboard
 
-## Author
-
-Dileep Tallamapuram
