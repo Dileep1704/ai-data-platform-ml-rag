@@ -1,17 +1,21 @@
-# AI Data Platform with ML & RAG
+# AI Data Platform with ML and RAG
 
 ## Overview
 
-This project is a scalable AI-powered data platform that supports data ingestion, machine learning predictions, and retrieval-augmented querying. It demonstrates how modern backend systems integrate ML models, databases, and APIs in a production-style environment.
+This project implements a scalable backend system that integrates machine learning, APIs, and databases. It demonstrates how modern data platforms handle data ingestion, model inference, and information retrieval in a production-style architecture.
 
 ## Features
 
-* REST APIs using FastAPI
-* ML model deployment (prediction API)
-* RAG-based query system
+* Data ingestion API using FastAPI
+* Machine learning prediction service
+* Retrieval-based query system (RAG)
 * PostgreSQL for structured data storage
 * MongoDB for unstructured data storage
-* Dockerized services for scalability
+* Containerized services using Docker
+
+## System Architecture
+
+Client → FastAPI → PostgreSQL and MongoDB → ML Model → Response
 
 ## Tech Stack
 
@@ -23,36 +27,47 @@ This project is a scalable AI-powered data platform that supports data ingestion
 
 ## API Endpoints
 
-* POST /ingest → Store data
-* POST /predict → ML predictions
-* GET /rag → Query system
+* POST /ingest — Store input data
+* POST /predict — Generate ML predictions
+* GET /rag — Retrieve relevant information
 
-## How to Run
+## Setup Instructions
 
-### 1. Clone repository
+### 1. Clone the repository
 
-git clone https://github.com/your-username/ai-data-platform-ml-rag.git
+git clone https://github.com/Dileep1704/ai-data-platform-ml-rag.git
 cd ai-data-platform-ml-rag
 
 ### 2. Install dependencies
 
 pip install -r requirements.txt
 
-### 3. Run Docker (DBs)
+### 3. Start databases using Docker
 
 docker-compose up -d
 
-### 4. Run backend
+### 4. Run backend server
 
 python -m uvicorn backend.main:app --reload
 
-### 5. Open API docs
+### 5. Access API documentation
 
 http://127.0.0.1:8000/docs
 
+## Design Considerations
+
+* Modular backend structure for scalability
+* Separation of concerns across API, ML, and database layers
+* Use of both SQL and NoSQL databases for flexibility
+* Containerized setup to simulate real deployment environments
+
 ## Future Improvements
 
-* Deploy on AWS
-* Add authentication
-* Add frontend dashboard
+* Cloud deployment (AWS or GCP)
+* Authentication and authorization
+* Frontend dashboard for visualization
+* Advanced LLM-based RAG implementation
 
+## Author
+
+Dileep Tallamapuram
