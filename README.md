@@ -12,7 +12,8 @@ This project implements a scalable backend system that integrates machine learni
 * PostgreSQL for structured data storage
 * MongoDB for unstructured data storage
 * Containerized services using Docker
-
+## API Preview
+![API](docs/api.png)
 ## System Architecture
 
 Client → FastAPI → PostgreSQL and MongoDB → ML Model → Response
@@ -68,6 +69,3 @@ http://127.0.0.1:8000/docs
 * Frontend dashboard for visualization
 * Advanced LLM-based RAG implementation
 
-## Author
-
-Dileep Tallamapuram
